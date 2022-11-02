@@ -1,6 +1,4 @@
-# Myopia Clusters
-
-In this assignment, you’ll apply what you learned about unsupervised learning by fitting data to a model and using clustering algorithms to place data into groups. Then, you’ll create a visualization that shares your findings. 
+# Myopia Clusters - Unsupervised Learning
 
 ## Background
 
@@ -26,20 +24,19 @@ This activity is broken down into four parts:
 
 2. Remove the "MYOPIC" column from the dataset.
 
-    * **Note:** The target column is needed for supervised machine learning, but it will make an unsupervised model biased. After all, the target column is effectively providing clusters already! 
-
 3. Standardize your dataset so that columns that contain larger values do not influence the outcome more than columns with smaller values.
+
+![image1](images/1.png)
 
 ### Part 2: Apply Dimensionality Reduction
 
-1. Perform dimensionality reduction with PCA. How did the number of the features change?
+1. Perform dimensionality reduction with PCA. 
 
+2. Further reduce the dataset dimensions with t-SNE and visually inspect the results. 
 
-  * **Hint:** Rather than specify the number of principal components when you instantiate the PCA model, state the desired **explained variance**. For example, say that a dataset has 100 features. Using `PCA(n_components=0.99)` creates a model that will preserve approximately 99% of the explained variance, whether that means reducing the dataset to 80 principal components or 3. For this assignment, preserve 90% of the explained variance in dimensionality reduction.
+3. Create a scatter plot of the t-SNE output. 
 
-2. Further reduce the dataset dimensions with t-SNE and visually inspect the results. To do this, run t-SNE on the principal components, which is the output of the PCA transformation. 
-
-3. Create a scatter plot of the t-SNE output. Are there distinct clusters?
+![image2](images/tsne.png)
 
 ### Part 3: Perform a Cluster Analysis with K-means
 
@@ -49,15 +46,12 @@ Create an elbow plot to identify the best number of clusters. Make sure to do th
 
 * If possible, determine where the elbow of the plot is, and at which value of `k` it appears.
 
+![image3](images/elbow.png)
+
 ### Part 4: Make a Recommendation
 
-Based on your findings, write up a brief (one or two sentences) recommendation for your supervisor in your Jupyter Notebook. Can the patients be clustered? If so, into how many clusters? 
+ ![image4](images/4.png)
 
-## Rubric
-
-[Unit 20 Homework Rubric](https://docs.google.com/document/d/1046PZMnFwxcNkyIewuJc_RYhaErY42HoNUKORkh18A4/edit)
-
-- - -
 
 ## References
 
